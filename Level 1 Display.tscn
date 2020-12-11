@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Level 1 Display.gd" type="Script" id=1]
+[ext_resource path="res://ColorRect.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Button.tscn" type="PackedScene" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" parent="." instance=ExtResource( 2 )]
+
+[node name="Button" parent="." instance=ExtResource( 3 )]
+margin_left = 361.575
+margin_top = 236.222
+margin_right = 606.575
+margin_bottom = 301.222
+
+[node name="Button2" parent="." instance=ExtResource( 3 )]
+margin_left = 361.575
+margin_top = 109.384
+margin_right = 606.575
+margin_bottom = 174.384
+text = "Numbers"
