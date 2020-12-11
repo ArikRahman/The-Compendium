@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="Button" type="Button"]
+margin_left = 67.4903
+margin_top = 61.1177
+margin_right = 312.49
+margin_bottom = 126.118
+text = "Arithmetic"
+__meta__ = {
+"_edit_use_anchors_": false
+}

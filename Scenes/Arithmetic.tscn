@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Arithmetic.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/ColorRect.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Data/Themes/Main Theme.res" type="Theme" id=3]
+[ext_resource path="res://Data/Fonts/Roboto/Roboto-Medium.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" parent="." instance=ExtResource( 2 )]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 511.0
+margin_top = 80.0
+margin_right = 562.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 1 )
+readonly = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_left = 308.924
+margin_top = 424.837
+margin_right = 721.924
+margin_bottom = 481.837
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 894.0
+margin_top = 98.0
+margin_right = 995.0
+margin_bottom = 161.0
+
+[node name="Button" type="Button" parent="."]
+margin_left = 731.673
+margin_top = 428.285
+margin_right = 811.673
+margin_bottom = 473.285
+text = "Enter"
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_left = 352.0
+margin_top = 156.0
+margin_right = 740.0
+margin_bottom = 304.0
+theme = ExtResource( 3 )
+autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="text_entered" from="LineEdit" to="." method="_on_LineEdit_text_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
